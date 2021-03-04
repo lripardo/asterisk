@@ -7,7 +7,7 @@ OS=`uname -s`
 if test -z ${USER_CUSTOM}; then
 USER=`id | awk -F")" '{print $1}'| awk -F"(" '{print $2}' | sed 's/\\\\/\\\\\\\\/g'`
 else
-USER=USER_CUSTOM
+USER=${USER_CUSTOM}
 fi
 
 DATE=`date -u "+%Y-%m-%d %H:%M:%S"`
