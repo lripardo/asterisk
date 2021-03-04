@@ -1,5 +1,6 @@
 #!/bin/sh
 
+if test -z ${ASTERISK_VERSION}; then
 AWK=${AWK:-awk}
 GIT=${GIT:-git}
 GREP=${GREP:-grep}
@@ -187,4 +188,7 @@ elif [ -d ${1}/.git ]; then
     fi
 else
     echo "UNKNOWN__and_probably_unsupported"
+fi
+else
+  echo ${ASTERISK_VERSION}
 fi
